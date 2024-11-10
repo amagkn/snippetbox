@@ -1,0 +1,11 @@
+services:
+  mysql:
+    image: mysql:8
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: snippetbox
+    volumes:
+      - ./dbdata:/var/lib/mysql/
