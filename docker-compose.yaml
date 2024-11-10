@@ -5,7 +5,9 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: snippetbox
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_USER: web
+      MYSQL_PASSWORD: web
     volumes:
       - ./dbdata:/var/lib/mysql/
